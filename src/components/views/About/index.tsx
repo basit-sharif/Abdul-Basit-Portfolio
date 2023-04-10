@@ -7,7 +7,7 @@ export default function About() {
             <a id="about"></a>
             <p className="text-4xl font-semibold underline">About Me</p>
             <div className="flex flex-col lg:flex-row justify-around items-center">
-                <div className="pt-10 sm:pt-8 md:pt-0">
+                <div className="pt-10 sm:pt-8 md:pt-0 fade_left">
                     <Image src={AboutCode} alt="About illutration" />
                 </div>
                 <div className="text-center sm:text-left space-y-6 max-w-xl py-12">

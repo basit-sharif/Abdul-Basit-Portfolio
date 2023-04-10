@@ -1,10 +1,31 @@
 import { Contact2 } from "@/components/assets/Images";
 import ButtonFirst from "@/components/shared/ButtonFirst";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Contact() {
+    useEffect(() => {
+        let isBrowser = () => typeof window !== "undefined";
+        if (isBrowser()) {
+            let element = document.querySelectorAll(".fade_right_rotate");
+            const observer = new IntersectionObserver((item: any) => {
+                item.map((subitem: any) => {
+                    if (subitem.isIntersecting) {
+                        subitem.target.classList.remove("fade_right_rotate_notView");
+                        subitem.target.classList.add("fade_right_rotate_view");
+                    } else {
+                        subitem.target.classList.add("fade_right_rotate_notView");
+                        subitem.target.classList.remove("fade_right_rotate_view");
+                    };
+                })
+            })
+            element.forEach((item: any) => {
+                observer.observe(item);
+            });
+        }
+    }, [])
     return (
-        <div className={`px-3 py-14 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tr  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
+        <div className={`overflow-hidden px-3 py-14 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tr from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
             <a id="contact"></a>
             <p className="text-3xl sm:text-4xl font-semibold underline">Contact Us</p>
             <div className="flex flex-col lg:flex-row justify-around items-center">
@@ -44,7 +65,7 @@ export default function Contact() {
                     </div>
                 </div>
                 <div className="pt-10 sm:pt-8 md:pt-0">
-                    <Image width={400} height={400} src={Contact2} alt="Contact illustration" />
+                    <Image className="fade_right_rotate" width={400} height={400} src={Contact2} alt="Contact illustration" />
                 </div>
             </div>
         </div>

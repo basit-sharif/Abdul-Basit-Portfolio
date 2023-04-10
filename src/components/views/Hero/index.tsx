@@ -30,8 +30,9 @@ export default function Hero() {
 
     return (
         <div className="py-4 w-full sm:w-full max-w-screen-xl h-auto max-h-[40rem] md:min-h-[40rem] md:h-[50rem] lg:h-full bg-white dark:bg-gradient-to-tr from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom mx-auto rounded-t-[2.5rem]">
-            <TopNavbar />
-
+            <a id="home">
+                <TopNavbar />
+            </a>
             <section className="py-12 sm:py-4 md:py-0 relative flex items-center justify-evenly flex-col md:flex-row w-full px-0 sm:px-14 h-full  ">
                 <div className="z-20 ">
                     <div className="relative">

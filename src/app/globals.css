@@ -2,9 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    .font-outline-4 {
+        -webkit-text-stroke: 3px #314c61;
+    }
+
+    .fade_right_notView {
+        @apply translate-x-40 opacity-0
+    }
+
+    .fade_right_view {
+        @apply translate-x-0 opacity-100 duration-700
+    }
+    .fade_left_notView {
+        @apply -translate-x-40 opacity-0
+    }
+
+    .fade_left_view {
+        @apply translate-x-0 opacity-100 duration-700
+    }
+    .fade_right_rotate_notView{
+        @apply rotate-45 translate-x-40 opacity-0
+    }
+    .fade_right_rotate_view{
+        @apply rotate-0 translate-x-0 opacity-100 duration-1000
+    }
+    .scaleout_view{
+        @apply scale-100 duration-1000
+    }
+    .scalein_view{
+        @apply scale-125
+    }
+}
 
 @layer components{
     .inputField{
         @apply bg-transparent border border-[#d7dde7] dark:border-[#9aa5b7] focus:border-[#3182CE] active:border-[#3182CE] hover:border-[#3182CE] duration-300 rounded-lg py-2 px-4
     }
 }
+
+.slider-arrow{
+    background: black;
+    border-radius: 200px;
+    overflow: hidden;
+    width:30px;
+    height:30px;
+    padding:5px;
+    color:white;
+    z-index: 100;
+    transition: all 0.4s ease-out;
+  }
+  .slider-arrow::after{
+    font-size:15px !important;
+    font-weight: 900 !important;
+  }
+  .slider-arrow:hover{
+    border:10px black solid;
+  }
