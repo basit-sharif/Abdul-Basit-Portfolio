@@ -215,7 +215,7 @@
 // Fetching data from api of contentfull for carousel
 
 export async function getCarouselDataOfContentfullApi() {
-    let manResponse = await fetch(`https://cdn.contentful.com/spaces/8ct6eyn41e88/environments/master/entries?access_token=CLDiH_AooWoxIxPEYbSbRRTqDfHp3t2uI56RZhjhZGk`);
+    let manResponse = await fetch(`https://cdn.contentful.com/spaces/8ct6eyn41e88/environments/master/entries?access_token=CLDiH_AooWoxIxPEYbSbRRTqDfHp3t2uI56RZhjhZGk`,{cache:"no-store"});
     let responseToJson = await manResponse.json();
     return responseToJson;
 }
