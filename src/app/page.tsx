@@ -10,11 +10,12 @@ import Contact from '@/components/views/Contact'
 import Footer from '@/components/views/Footer/indes'
 import Testimonials from '@/components/views/Testimonials'
 import ProjectCarousel from '@/components/views/ProjectCarousel'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+
   useEffect(() => {
     let isBrowser = () => typeof window !== "undefined";
     if (isBrowser()) {
