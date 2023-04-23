@@ -1,4 +1,3 @@
-
 import BackgroundImage from '@/components/shared/BackgroundImage'
 import SideNavbar from '@/components/views/SideNavbar'
 import './globals.css'
@@ -6,6 +5,7 @@ import Wrapper from '@/components/shared/Wrapper'
 import Image from 'next/image'
 import { PreLoader } from '@/components/assets/Images'
 import GoToTop from '@/components/views/GoToTop'
+import Seo from '@/components/shared/Seo'
 
 export const metadata = {
   title: 'Abdul-Basit',
@@ -15,10 +15,11 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode,
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <Seo canonical={"https://abdulbasit-self.vercel.app/"} />
       <body className='scrollbar-thin scrollbar-thumb-purple-600 dark:scrollbar-thumb-darkBackgroundTop scrollbar-track-purple-400 dark:scrollbar-track-purple-400'>
         <GoToTop />
         <Wrapper>
@@ -31,4 +32,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-}
+};
