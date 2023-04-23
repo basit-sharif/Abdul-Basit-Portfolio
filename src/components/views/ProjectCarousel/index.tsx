@@ -64,11 +64,6 @@ export default function ProjectCarousel() {
                                 <ProjectsCarouselCard data={item} imageData={projectData.includes.Asset} />
                             </SwiperSlide>
                         )}
-                        {/* {CarouselCardData.map((item: CarouselCardDataType, index: number) =>
-                        <SwiperSlide key={index + 9578662}>
-                            <ProjectsCarouselCard data={item} />
-                        </SwiperSlide>
-                    )} */}
                     </div>
                     <div className="slider-controler">
                         <div className="swiper-button-prev slider-arrow "></div>

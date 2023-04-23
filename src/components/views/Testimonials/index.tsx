@@ -93,7 +93,7 @@ export default function Testimonials() {
                                     <div className='bg-white px-6 pb-4 pt-14 text-center space-y-3'>
                                         <h3 className='text-[#1F425D] text-2xl font-bold'>{item.name}</h3>
                                         <p className='text-gray-700 text-lg font-serif'>{item.text}</p>
-                                        <Image className='mx-auto' width={100} height={80} src={"/reviews.jpg"} alt="" />
+                                        <Image className='mx-auto' width={100} height={80} src={"/reviews.jpg"} alt="review icon" />
                                     </div>
                                 </div>
                             </SwiperSlide>

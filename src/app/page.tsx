@@ -15,7 +15,6 @@ import { useEffect, useState } from 'react'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-
   useEffect(() => {
     let isBrowser = () => typeof window !== "undefined";
     if (isBrowser()) {
