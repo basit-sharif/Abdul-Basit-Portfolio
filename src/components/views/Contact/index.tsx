@@ -1,7 +1,7 @@
 import { Contact2 } from "@/components/assets/Images";
 import ButtonFirst from "@/components/shared/ButtonFirst";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -10,7 +10,7 @@ export default function Contact() {
     const sendEmail = (e: any) => {
         e.preventDefault();
         alert("Thanks for Contacting us we will get soon in touch")
-        emailjs.sendForm("service_ledzw74", "template_orcnisd", form.current, "S29CKO56YxwtT0GSF")
+        emailjs.sendForm(`${process.env.EMAIL_JS_SERVIES_ID}`, `${process.env.EMAIL_JS_TEMPLETE_ID}`, form.current, `${process.env.EMAIL_JS_PUBLIC_KEY}`)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
@@ -61,18 +61,8 @@ export default function Contact() {
                         <input name="phone_number" placeholder="i.e, +9237787615" className="inputField w-full" id="phone" type="text" />
                     </div>
                     <div className="flex flex-col items-start  sm:col-span-2">
-                        <label htmlFor="country">Choose Your's Country:</label>
-                        <select className="inputField w-full" name="country" id="country">
-                            <option selected value="Pakistan">Pakistan</option>
-                            <option value="India">India</option>
-                            <option value="Canada">Canada</option>
-                            <option value="UAE">UAE(United Arab Emarat)</option>
-                            <option value="USA">USA(United State of America)</option>
-                            <option value="Russia">Russia</option>
-                            <option value="SoudiaArabia">Soudia Arabia</option>
-                            <option value="Iran">Iran</option>
-                            <option value="Turkey">Turkey</option>
-                        </select>
+                        <label htmlFor="country">Message why you want to contact us :</label>
+                        <textarea className="inputField w-full" name="message" id="country" />
                         <div className="mt-4  w-full sm:col-span-2">
                             <button className="font-semibold text-white hover:text-black dark:hover:text-white bg-[#2B6CB0] w-full cursor-pointer px-8 py-[0.35rem] hover:bg-gray-200 dark:hover:bg-darkBackgroundTop duration-200 rounded-sm">Submit</button>
                         </div>

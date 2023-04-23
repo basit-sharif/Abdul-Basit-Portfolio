@@ -78,8 +78,8 @@ export default function Home() {
         <Testimonials />
         <ProjectCarousel />
         <About />
-      <Contact />
-      <Footer />
+        <Contact />
+        <Footer />
       </section>
     </ThemeProvider>
   )
