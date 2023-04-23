@@ -1,9 +1,23 @@
 import { Contact2 } from "@/components/assets/Images";
 import ButtonFirst from "@/components/shared/ButtonFirst";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
+    const form: any = useRef();
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+        alert("Thanks for Contacting us we will get soon in touch")
+        emailjs.sendForm("service_ledzw74", "template_orcnisd", form.current, "S29CKO56YxwtT0GSF")
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
+
     useEffect(() => {
         let isBrowser = () => typeof window !== "undefined";
         if (isBrowser()) {
@@ -29,22 +43,22 @@ export default function Contact() {
             <a id="contact"></a>
             <p className="text-3xl sm:text-4xl font-semibold underline">Contact Us</p>
             <div className="flex flex-col lg:flex-row justify-around items-center">
-                <div className="text-subHeading grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-lg  ">
+                <form onSubmit={sendEmail} ref={form} className="text-subHeading grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-lg  ">
                     <div className="flex flex-col items-start">
                         <label htmlFor="firstName" >First Name:</label>
-                        <input placeholder="John" className="inputField w-full" id="firstName" type="text" />
+                        <input name="first_name" placeholder="John" className="inputField w-full" id="firstName" type="text" />
                     </div>
                     <div className="flex flex-col items-start  ">
                         <label htmlFor="secondName" >Second Name:</label>
-                        <input placeholder="Doe" className="inputField w-full" id="secondName" type="text" />
+                        <input name="second_name" placeholder="Doe" className="inputField w-full" id="secondName" type="text" />
                     </div>
                     <div className="flex flex-col items-start ">
                         <label htmlFor="email" >Your's E-Mail Address:</label>
-                        <input placeholder="i.e, Jondoe@gmail.com" className="inputField w-full" id="email" type="text" />
+                        <input name="email" placeholder="i.e, Jondoe@gmail.com" className="inputField w-full" id="email" type="text" />
                     </div>
                     <div className="flex flex-col items-start ">
                         <label htmlFor="phone" >Your's Phone Number:</label>
-                        <input placeholder="i.e, +9237787615" className="inputField w-full" id="phone" type="text" />
+                        <input name="phone_number" placeholder="i.e, +9237787615" className="inputField w-full" id="phone" type="text" />
                     </div>
                     <div className="flex flex-col items-start  sm:col-span-2">
                         <label htmlFor="country">Choose Your's Country:</label>
@@ -63,7 +77,7 @@ export default function Contact() {
                             <button className="font-semibold text-white hover:text-black dark:hover:text-white bg-[#2B6CB0] w-full cursor-pointer px-8 py-[0.35rem] hover:bg-gray-200 dark:hover:bg-darkBackgroundTop duration-200 rounded-sm">Submit</button>
                         </div>
                     </div>
-                </div>
+                </form>
                 <div className="pt-10 sm:pt-8 md:pt-0">
                     <Image className="fade_right_rotate" width={400} height={400} src={Contact2} alt="Contact illustration" />
                 </div>
