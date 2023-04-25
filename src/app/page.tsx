@@ -69,6 +69,7 @@ export default function Home() {
   }, [])
   return (
     <ThemeProvider enableSystem={true} attribute="class">
+      <a id="home" />
       <section className='px-0 sm:px-10 pt-8 h-screen'>
         <Hero />
         <Skills />
