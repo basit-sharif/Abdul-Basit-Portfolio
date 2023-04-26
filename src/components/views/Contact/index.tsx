@@ -6,10 +6,12 @@ import emailjs from '@emailjs/browser';
 
 export default function Contact() {
     const form: any = useRef();
+    const [isDisable, setDisable] = useState<boolean>(false);
 
     const sendEmail = (e: any) => {
         e.preventDefault();
-        alert("Thanks for Contacting us we will get soon in touch")
+        alert("Thanks for Contacting us we will get soon in touch");
+        setDisable(true)
         emailjs.sendForm(`${process.env.EMAIL_JS_SERVIES_ID}`, `${process.env.EMAIL_JS_TEMPLETE_ID}`, form.current, `${process.env.EMAIL_JS_PUBLIC_KEY}`)
             .then((result) => {
                 console.log(result.text);
@@ -64,7 +66,7 @@ export default function Contact() {
                         <label htmlFor="country">Message why you want to contact us :</label>
                         <textarea className="inputField w-full" name="message" id="country" />
                         <div className="mt-4  w-full sm:col-span-2">
-                            <button className="font-semibold text-white hover:text-black dark:hover:text-white bg-[#2B6CB0] w-full cursor-pointer px-8 py-[0.35rem] hover:bg-gray-200 dark:hover:bg-darkBackgroundTop duration-200 rounded-sm">Submit</button>
+                            <button disabled={isDisable} className="font-semibold text-white hover:text-black dark:hover:text-white bg-[#2B6CB0] w-full cursor-pointer px-8 py-[0.35rem] hover:bg-gray-200 dark:hover:bg-darkBackgroundTop duration-200 rounded-sm">Submit</button>
                         </div>
                     </div>
                 </form>
