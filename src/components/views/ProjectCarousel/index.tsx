@@ -24,7 +24,8 @@ export default function ProjectCarousel() {
     }, []);
     return (
         <div className={`py-8 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tr  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
-            <a id="projectcarousel"></a>
+            {/* <a id="projectcarousel"></a> */}
+            <div className='projectcarousel' />
             <p className="text-4xl font-semibold underline">All Projects</p>
 
             {projectData ?

@@ -13,8 +13,8 @@ export default function WorkingDaysCard({ WorkingDaysArray }: any) {
                                     <div className="flex items-center justify-center bg-[#DD58DD] rounded-full w-12 h-12">{item.icon}</div>
                                 </div>
                                 <div className="text-start">
-                                    <p className="text-2xl font-semibold text-subHeading">{item.day}</p>
-                                    <p className="text-base font-medium text-heading">{item.timing}</p>
+                                    <p className="text-2xl font-semibold text-subHeading dark:text-gray-400">{item.day}</p>
+                                    <p className="text-base font-medium text-subHeading dark:text-gray-300">{item.timing}</p>
                                 </div>
                             </div>
                             <div className="ml-4 duration-300 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"><IoArrowForwardSharp /></div>

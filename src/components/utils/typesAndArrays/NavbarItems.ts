@@ -13,31 +13,31 @@ export const NavbarItems: Array<navbarItemsType> = [
         icon: Home,
         alt: "home icon",
         abbriviation: "Home",
-        link: "/",
+        link: "home",
     },
     {
         icon: Projects,
         alt: "project icon",
         abbriviation: "Projects",
-        link: "#projects",
+        link: "projects",
     },
     {
         icon: Testimonials,
         alt: "testimonials icon",
         abbriviation: "Testimonials",
-        link: "#testimonials",
+        link: "testimonials",
     },
     {
         icon: About,
         alt: "about icon",
         abbriviation: "About",
-        link: "#about",
+        link: "about",
     },
     {
         icon: Contact,
         alt: "contact icon",
         abbriviation: "Contact",
-        link: "#contact"
+        link: "contact"
     },
     {
         icon: Cv,
@@ -45,5 +45,3 @@ export const NavbarItems: Array<navbarItemsType> = [
         abbriviation: "Download CV",
     },
 ]
-// Dar
-// CV

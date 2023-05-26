@@ -11,6 +11,7 @@ import Footer from '@/components/views/Footer/indes'
 import Testimonials from '@/components/views/Testimonials'
 import ProjectCarousel from '@/components/views/ProjectCarousel'
 import { useEffect, useState } from 'react'
+import MyServices from '@/components/views/MyServices'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -33,23 +34,6 @@ export default function Home() {
       element.forEach((item: any) => {
         observer.observe(item);
       });
-    }
-    if (isBrowser()) {
-      let element = document.querySelectorAll(".fade_right_rotate");
-      const observer = new IntersectionObserver((item: any) => {
-        item.map((subitem: any) => {
-          if (subitem.isIntersecting) {
-            subitem.target.classList.remove("fade_right_rotate_notView");
-            subitem.target.classList.add("fade_right_rotate_view");
-          } else {
-            subitem.target.classList.add("fade_right_rotate_notView");
-            subitem.target.classList.remove("fade_right_rotate_view");
-          };
-        })
-      })
-      element.forEach((item: any) => {
-        observer.observe(item);
-      })
       let element2 = document.querySelectorAll(".fade_left");
       const observer2 = new IntersectionObserver((item: any) => {
         item.map((subitem: any) => {
@@ -69,9 +53,10 @@ export default function Home() {
   }, [])
   return (
     <ThemeProvider enableSystem={true} attribute="class">
-      <a id="home" />
-      <section className='px-0 sm:px-10 pt-8 h-screen'>
+      <div id='home' />
+      <main className='px-0 sm:px-10 pt-8 h-screen'>
         <Hero />
+        <MyServices />
         <Skills />
         <RecentProjects />
         <WorkingDays />
@@ -80,7 +65,7 @@ export default function Home() {
         <About />
         <Contact />
         <Footer />
-      </section>
+      </main>
     </ThemeProvider>
   )
 }

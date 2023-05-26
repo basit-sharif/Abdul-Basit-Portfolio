@@ -18,8 +18,8 @@ export default function SideNavbar() {
             </div>
             <div className="w-full h-full flex flex-col items-center py-8 space-y-6 lg:space-y-8">
                 {NavbarItems.map((items: navbarItemsType, index: number) => (
-                    <a key={index + 1} href={items.link}>
-                        <div className={`${sideBar ? "visible" : "invisible"} w-12 h-12 border-2 border-gray-300 hover:border-gray-400 bg-white dark:bg-darkBackgroundTop rounded-full flex justify-center items-center cursor-pointer`}>
+                    <a key={index + 1} href={`/#${items.link}`}>
+                        <div key={index + 4} className={`${sideBar ? "visible" : "invisible"} w-12 h-12 border-2 border-gray-300 hover:border-gray-400 bg-white dark:bg-darkBackgroundTop rounded-full flex justify-center items-center cursor-pointer`}>
                             <abbr title={items.abbriviation}><Image className='w-6 sm:8' src={items.icon} alt="icons" /></abbr>
                         </div>
                     </a>
@@ -27,4 +27,4 @@ export default function SideNavbar() {
             </div>
         </div>
     )
-}
+};

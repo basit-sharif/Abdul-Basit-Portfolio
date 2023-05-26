@@ -37,8 +37,6 @@ export default function Seo({
       <meta key="og_image:width" property="og:image:width" content="1200" />
       <meta key="og_image:height" property="og:image:height" content="630" />
 
-      <meta name="robots" content="index,follow" />
-
       <meta
         key="twitter:card"
         name="twitter:card"

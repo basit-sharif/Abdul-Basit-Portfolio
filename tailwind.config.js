@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       colors:{
         fullBackground:"#337CE5",
-        subHeading:"#7A879B",
+        subHeading:"#49515D",
         heading:"#4F5864",
         darkBackgroundBottom:'#0F172A',
         darkBackgroundTop:'#17324F',

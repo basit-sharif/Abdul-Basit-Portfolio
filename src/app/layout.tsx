@@ -9,7 +9,7 @@ import Seo from '@/components/shared/Seo'
 
 export const metadata = {
   title: 'Abdul-Basit',
-  description: 'This is my Personal website or Portfolio.Throughout this you can place your order for a software',
+  description: 'Welcome to my software portfolio website! Here you will find a collection of high-quality software solutions designed to make your life easier and more productive.Throughout this you can place your order for a software.',
 }
 
 export default function RootLayout({
@@ -19,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <Seo canonical={"https://abdulbasit-self.vercel.app/"} />
+      <head>
+        <Seo canonical={"https://abdulbasit-self.vercel.app/"} />
+      </head>
       <body className='scrollbar-thin scrollbar-thumb-purple-600 dark:scrollbar-thumb-darkBackgroundTop scrollbar-track-purple-400 dark:scrollbar-track-purple-400'>
         <GoToTop />
         <Wrapper>

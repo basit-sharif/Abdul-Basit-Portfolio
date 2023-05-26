@@ -43,13 +43,13 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="w-auto sm:w-[40rem] p-0 mt-4 sm:mt-0 sm:p-3 z-20 space-y-4 flex flex-col items-center md:items-start ">
-                    <h4 className="text-subHeading font-medium">--- Frontend Developer (Web 3.0)</h4>
+                    <p className="text-subHeading dark:text-gray-400 font-medium">--- Frontend Developer (Web 3.0)</p>
                     <h1 className="text-heading opacity-80 font-semibold text-2xl sm:text-5xl dark:text-white ">Hi, <span className="tracking-tight leading-tight" ref={el}></span></h1>
                     <p className="px-2 text-center md:text-left sm:px-0 max-w-md sm:max-w-lg text-lg dark:text-[#919eb1]">As salam o alikum , My Name is Abdul-Basit . I am a Web-Developer && Frontend Developer focused on making clean , User's friendly UI and good SEO for search Engines.</p>
-                    <button className="group flex items-center pl-2 border-2 border-subHeading rounded-full">
+                    <a href="/#about" className="group flex items-center pl-2 border-2 border-subHeading rounded-full">
                         <span className="px-2">More About me</span>
                         <ArrowBounc right={true} />
-                    </button>
+                    </a>
                 </div>
                 <div className="absolute top-10 sm:top-14 right-20 sm:right-28 animate-pulse dark:opacity-40">
                     <Image src={Rectangles} alt="reactangle" />

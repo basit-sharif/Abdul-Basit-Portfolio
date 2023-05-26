@@ -4,7 +4,8 @@ import RecentProjectCard from "@/components/viewComponents/RecentProjectCard/Rec
 export default function RecentProjects() {
     return (
         <div className={`py-8 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tl  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
-            <a id="projects"></a>
+            {/* <a id="projects"></a> */}
+            <div id="projects" />
             <p className="text-4xl font-semibold underline">Recent Projects</p>
             <div className="mt-10 pr-7">
                 <RecentProjectCard RecentProjectsCards={RecentProjectsCards} />

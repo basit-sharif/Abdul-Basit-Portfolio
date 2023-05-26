@@ -4,7 +4,8 @@ import Image from "next/image";
 export default function About() {
     return (
         <div className={`px-3 py-14 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tl  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
-            <a id="about"></a>
+            {/* <a id="about"></a> */}
+            <div id="about" />
             <p className="text-4xl font-semibold underline">About Me</p>
             <div className="flex flex-col lg:flex-row justify-around items-center">
                 <div className="pt-10 sm:pt-8 md:pt-0 fade_left">
@@ -12,8 +13,8 @@ export default function About() {
                 </div>
                 <div className="text-center sm:text-left space-y-6 max-w-xl py-12">
                     {Data.map((item: Types, index: number) =>
-                        <div key={index +10} className="space-y-3">
-                            <h4 className="text-xl font-medium text-subHeading">{item.heading}</h4>
+                        <div key={index + 10} className="space-y-3">
+                            <h4 className="text-xl font-medium text-subHeading dark:text-gray-400">{item.heading}</h4>
                             <p className="text-lg font-normal text-heading dark:text-slate-300">{item.content}</p>
                         </div>
                     )}
@@ -21,8 +22,7 @@ export default function About() {
             </div>
         </div>
     )
-}
-
+};
 
 interface Types {
     heading: string,

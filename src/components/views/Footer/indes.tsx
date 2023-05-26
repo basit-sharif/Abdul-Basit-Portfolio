@@ -16,19 +16,19 @@ export default function Footer() {
                 <div className={`py-4 flex items-center justify-around text-center`}>
                     <div className="hidden sm:flex items-center space-x-1">
                         <Image className="block" width={45} src={Logo} alt="Abdul-Basit Logo" />
-                        <Link href="/"><h2 className="text-heading font-bold text-xl dark:text-[#aab5c5]">Abdul <span className="font-semibold">Basit</span></h2></Link>
+                        <Link href="/"><h5 className="text-heading font-bold text-xl dark:text-[#aab5c5]">Abdul <span className="font-semibold">Basit</span></h5></Link>
                     </div>
                     <ul className="flex justify-center items-center space-x-4">
-                        <li><Link href="https://github.com/basitgggg" target="_blank"><ImGithub fill="#7A879B" size={26} /></Link></li>
-                        <li><Link href="https://www.youtube.com/@leadingbright2580" target="_blank"><GrYoutube fill="#7A879B" size={24} /></Link></li>
-                        <li><Link href="tel:+923023763614"><BsTelephonePlusFill fill="#7A879B" size={22} /></Link></li>
-                        <li><Link href="https://www.facebook.com/profile.php?id=100053174165999" target="_blank"><SiFacebook fill="#7A879B" size={26} /></Link></li>
-                        <li><Link href="https://www.linkedin.com/in/abdul-basit-417920251/" target="_blank"><IoLogoLinkedin fill="#7A879B" size={26} /></Link></li>
-                        <li><Link href="mailto:ba3568008@gmail.com"><SiGmail fill="#7A879B" size={26} /></Link></li>
+                        <li><Link aria-label="Github username" href="https://github.com/basitgggg" target="_blank"><ImGithub fill="#7A879B" size={26} /></Link></li>
+                        <li><Link aria-label="Youtube channel" href="https://www.youtube.com/@leadingbright2580" target="_blank"><GrYoutube fill="#7A879B" size={24} /></Link></li>
+                        <li><Link aria-label="call me throught mobile" href="tel:+923023763614"><BsTelephonePlusFill fill="#7A879B" size={22} /></Link></li>
+                        <li><Link aria-label="reach me on Facebook" href="https://www.facebook.com/profile.php?id=100053174165999" target="_blank"><SiFacebook fill="#7A879B" size={26} /></Link></li>
+                        <li><Link aria-label="My LinkedIn" href="https://www.linkedin.com/in/abdul-basit-417920251/" target="_blank"><IoLogoLinkedin fill="#7A879B" size={26} /></Link></li>
+                        <li><Link aria-label="Mail me for give me work" href="mailto:ba3568008@gmail.com"><SiGmail fill="#7A879B" size={26} /></Link></li>
                     </ul>
                 </div>
-                <p className="text-subHeading">© 2023 Abdul-Basit All CopyRights Reserved </p>
+                <p className="text-subHeading dark:text-gray-400">© 2023 Abdul-Basit All CopyRights Reserved</p>
             </div>
         </div>
     )
-}
+};

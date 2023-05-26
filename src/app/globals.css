@@ -6,18 +6,15 @@
     .font-outline-4 {
         -webkit-text-stroke: 3px #314c61;
     }
-
     .fade_right_notView {
         @apply translate-x-40 opacity-0
     }
-
     .fade_right_view {
         @apply translate-x-0 opacity-100 duration-700
     }
     .fade_left_notView {
         @apply -translate-x-40 opacity-0
     }
-
     .fade_left_view {
         @apply translate-x-0 opacity-100 duration-700
     }
@@ -34,13 +31,11 @@
         @apply scale-125
     }
 }
-
 @layer components{
     .inputField{
         @apply bg-transparent border border-[#d7dde7] dark:border-[#9aa5b7] focus:border-[#3182CE] active:border-[#3182CE] hover:border-[#3182CE] duration-300 rounded-lg py-2 px-4
     }
 }
-
 .slider-arrow{
     background: black;
     border-radius: 200px;
@@ -51,11 +46,14 @@
     color:white;
     z-index: 100;
     transition: all 0.4s ease-out;
-  }
-  .slider-arrow::after{
+}
+.slider-arrow::after{
     font-size:15px !important;
     font-weight: 900 !important;
-  }
-  .slider-arrow:hover{
+}
+.slider-arrow:hover{
     border:10px black solid;
-  }
+}
+html, body {
+    scroll-behavior: smooth;
+}
