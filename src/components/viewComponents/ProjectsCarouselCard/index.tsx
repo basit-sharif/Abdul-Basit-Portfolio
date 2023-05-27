@@ -19,7 +19,7 @@ export default function ProjectsCarouselCard({ data, imageData }: { data: any, i
                     </div>
                 ))}
                 <div className="group-hover:scale-105 space-x-6 flex justify-center items-center absolute inset-0 rounded-t-2xl invisible group-hover:visible bg-black opacity-40 duration-500">
-                    <Link href={fieldsOfItems.github+"/api"} target="_blank">
+                    <Link href={fieldsOfItems.github+""} target="_blank">
                         <GoMarkGithub fill="blue" size={30} />
                     </Link>
                     <Link href={fieldsOfItems.link} target="_blank">

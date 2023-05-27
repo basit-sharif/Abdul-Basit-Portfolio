@@ -28,7 +28,7 @@ export default function RecentProjectCard({ RecentProjectsCards }: { RecentProje
     }
   });
   return (
-    <div className="flex-wrap flex justify-start sm:justify-center items-center space-x-8 space-y-8">
+    <div className="flex-wrap flex justify-start sm:justify-center items-center gap-8">
       {RecentProjectsCards.map((item: RecentProjectsCardsType, index: number) => (
         <div key={index + 5} className="flex flex-col items-start h-[27rem] rounded-2xl bg-gray-200 dark:bg-[#151030] p-4 space-y-3 hover:scale-105 duration-500 hover:shadow-xl cursor-pointer">
           <div className="group h-60 min-w-[10rem] w-full sm:w-[26rem] relative overflow-hidden">
