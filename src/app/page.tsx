@@ -56,7 +56,7 @@ export default function Home() {
       <div id='home' />
       <main className='px-0 sm:px-10 pt-8 h-screen'>
         <Hero />
-        <MyServices />
+        {/* <MyServices /> */}
         <Skills />
         <RecentProjects />
         <WorkingDays />

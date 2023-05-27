@@ -7,7 +7,7 @@ export default function RecentProjects() {
             {/* <a id="projects"></a> */}
             <div id="projects" />
             <p className="text-4xl font-semibold underline">Recent Projects</p>
-            <div className="mt-10 pr-7">
+            <div className="mt-10 px-2 md:px-4">
                 <RecentProjectCard RecentProjectsCards={RecentProjectsCards} />
             </div>
         </div>
