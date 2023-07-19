@@ -13,9 +13,7 @@ function checkIfAlreadyExsist(elem: any) {
     }
 }
 function throwError(elem: any, message: string) {
-    if (checkIfAlreadyExsist(elem.parentElement)) {
-        console.log("Already Exsist");
-    } else {
+    if (!checkIfAlreadyExsist(elem.parentElement)) {
         const para = document.createElement("p");
         const node = document.createTextNode(message);
         para.appendChild(node);
@@ -40,17 +38,17 @@ export default function checkValidation(firstChildValue: any, secondChildValue: 
         removeError(secondChildValue);
     };
     if (!emailChildValue?.value) {
-        throwError(emailChildValue, "! Email name is required");
+        throwError(emailChildValue, "! Email address is required");
     } else {
         removeError(emailChildValue);
         if (validateEmail(emailChildValue?.value)) {
             removeError(emailChildValue);
-        }else{
-        throwError(emailChildValue, "Invalid Email Address");
+        } else {
+            throwError(emailChildValue, "Invalid Email Address");
         }
     }
     if (!phoneChildValue?.value) {
-        throwError(phoneChildValue, "! Phone name is required");
+        throwError(phoneChildValue, "! Phone number is required");
     } else {
         removeError(phoneChildValue);
     };

@@ -6,12 +6,12 @@ const DEFAULT_OG_IMAGE =
 
 export default function Seo({
   title = "AbdulBasit",
-  description = "AbdulBasit job in developing user interface design and frontend development. He's very good in designing, coding.",
+  description = "AbdulBasit job is to develope Full stack applications and Designing the application. He's very good in designing, coding.",
   siteName = "abdulbasit",
   canonical = DOMAIN,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = "website",
-  youtubeHandle = "@leadingbright2580",
+  youtubeHandle = "@leadingbright",
 }) {
   return (
     <Head>

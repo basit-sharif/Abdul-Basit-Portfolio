@@ -14,7 +14,7 @@ export default function Hero() {
     useEffect(() => {
 
         const typed = new Typed(el.current ? el.current : "", {
-            strings: ["This is Abdul-Basit", "I am Frontend Developer", "I am A Designer", "I am student at PIAIC"], // Strings to display
+            strings: ["This is Abdul-Basit", "I am FullStack Developer", "I am a Designer"], // Strings to display
             // Speed settings, try diffrent values untill you get good results
             startDelay: 300,
             typeSpeed: 100,
@@ -43,9 +43,9 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="w-auto sm:w-[40rem] p-0 mt-4 sm:mt-0 sm:p-3 z-20 space-y-4 flex flex-col items-center md:items-start ">
-                    <p className="text-subHeading dark:text-gray-400 font-medium">--- Frontend Developer (Web 3.0)</p>
+                    <p className="text-subHeading dark:text-gray-400 font-medium">--- FullStack Developer (Web 3.0)</p>
                     <h1 className="text-heading opacity-80 font-semibold text-2xl sm:text-5xl dark:text-white ">Hi, <span className="tracking-tight leading-tight" ref={el}></span></h1>
-                    <p className="px-2 text-center md:text-left sm:px-0 max-w-md sm:max-w-lg text-lg dark:text-[#919eb1]">As salam o alikum , My Name is Abdul-Basit . I am a Web-Developer && Frontend Developer focused on making clean , User's friendly UI and good SEO for search Engines.</p>
+                    <p className="px-2 text-center md:text-left sm:px-0 max-w-md sm:max-w-lg text-lg dark:text-[#919eb1]">As salam o alikum , My Name is Abdul-Basit . I am a FullStack Web-Developer focused on making clean , User's friendly UI also focus on good SEO for search Engines.</p>
                     <a href="/#about" className="group flex items-center pl-2 border-2 border-subHeading rounded-full">
                         <span className="px-2">More About me</span>
                         <ArrowBounc right={true} />

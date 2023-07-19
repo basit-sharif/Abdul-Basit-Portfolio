@@ -40,6 +40,6 @@ let Data: Array<Types> = [
     },
     {
         heading: "Interested In",
-        content: "I am a Frontend developer (Web 1.0).I am interested in building very beautifull web 1.0 applications focused on making clean and good SEO websites using Tailwind Css or Chakra UI.",
+        content: "I am a FullStack developer (Web 2.0).I am interested in building very beautifull web 2.0 applications focused on making clean and good SEO websites using Tailwind Css and Chakra UI etc.",
     },
 ]

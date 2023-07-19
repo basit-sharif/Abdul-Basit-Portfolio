@@ -7,26 +7,7 @@ import { GoMarkGithub } from "react-icons/go"
 import { useEffect } from "react"
 
 export default function RecentProjectCard({ RecentProjectsCards }: { RecentProjectsCards: Array<RecentProjectsCardsType> }) {
-  useEffect(() => {
-    let isBrowser = () => typeof window !== "undefined";
-    if (isBrowser()) {
-      let element = document.querySelectorAll(".scaling_animation");
-      const observer = new IntersectionObserver((item: any) => {
-        item.map((subitem: any) => {
-          if (subitem.isIntersecting) {
-            subitem.target.classList.add("scaleout_view");
-            subitem.target.classList.remove("scalein_view");
-          } else {
-            subitem.target.classList.add("scalein_view");
-            subitem.target.classList.remove("scaleout_view");
-          };
-        })
-      })
-      element.forEach((item: any) => {
-        observer.observe(item);
-      });
-    }
-  });
+
   return (
     <div className="flex-wrap flex justify-center items-center gap-8">
       {RecentProjectsCards.map((item: RecentProjectsCardsType, index: number) => (

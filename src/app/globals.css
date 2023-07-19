@@ -28,7 +28,7 @@
         @apply scale-100 duration-1000
     }
     .scalein_view{
-        @apply scale-125
+        @apply scale-110
     }
 }
 @layer components{

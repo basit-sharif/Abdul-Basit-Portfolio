@@ -10,41 +10,7 @@ import { useEffect } from 'react';
 
 
 export default function Testimonials() {
-    useEffect(() => {
-        let isBrowser = () => typeof window !== "undefined";
-        if (isBrowser()) {
-            let element = document.querySelectorAll(".fade_right");
-            const observer = new IntersectionObserver((item: any) => {
-                item.map((subitem: any) => {
-                    if (subitem.isIntersecting) {
-                        subitem.target.classList.remove("fade_right_notView");
-                        subitem.target.classList.add("fade_right_view");
-                    } else {
-                        subitem.target.classList.add("fade_right_notView");
-                        subitem.target.classList.remove("fade_right_view");
-                    };
-                })
-            })
-            element.forEach((item: any) => {
-                observer.observe(item);
-            })
-            let element2 = document.querySelectorAll(".fade_left");
-            const observer2 = new IntersectionObserver((item: any) => {
-                item.map((subitem: any) => {
-                    if (subitem.isIntersecting) {
-                        subitem.target.classList.remove("fade_left_notView");
-                        subitem.target.classList.add("fade_left_view");
-                    } else {
-                        subitem.target.classList.add("fade_left_notView");
-                        subitem.target.classList.remove("fade_left_view");
-                    };
-                })
-            })
-            element2.forEach((item: any) => {
-                observer2.observe(item);
-            })
-        }
-    }, [])
+
     return (
         <div className='overflow-hidden py-8 bg-[#F3F4F6] dark:bg-gradient-to-tl  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom'>
             <div id="testimonials" />
