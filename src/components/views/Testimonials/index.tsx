@@ -21,7 +21,7 @@ export default function Testimonials() {
                     <h3 className='text-subHeading dark:text-white text-4xl md:text-6xl font-bold'>Testimonials</h3>
                     <p className='text-subHeading dark:text-white'>What People Say About Me And About My Services</p>
                 </div>
-                <div className='max-w-[21rem] sm:max-w-[24rem] md:max-w-[46rem] fade_right'>
+                <div className='max-w-[21rem] sm:max-w-[24rem] md:max-w-[46rem]'>
                     <Swiper
                         autoplay={{
                             delay: 5000,

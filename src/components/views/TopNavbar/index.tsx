@@ -43,7 +43,7 @@ export default function TopNavbar() {
                                             <IoIosDesktop size={25} />
                                         </div>
                             }
-                            <div className={` ${toggleBetweeMode ? "visible" : "invisible"} text-gray-800 absolute top-12 w-32 bg-slate-100 dark:bg-darkBackgroundTop z-40 rounded-lg py-1 shadow-xl dark:shadow-gray-900 border border-gray-300 dark:border-transparent`}>
+                            <div className={` ${toggleBetweeMode ? "visible" : "invisible"} text-gray-800 absolute top-12 w-32 bg-slate-100 dark:bg-darkBackgroundTop z-40 rounded-lg py-[1px] shadow-xl dark:shadow-gray-900 border border-gray-300 dark:border-transparent`}>
                                 <div onClick={() => { setTheme("light") }} className="flex gap-3 items-center hover:bg-slate-200 dark:text-gray-300 dark:hover:bg-slate-400 px-3 py-1">
                                     <ImSun fill="#4F5864" size={21} />
                                     <p>Light</p>

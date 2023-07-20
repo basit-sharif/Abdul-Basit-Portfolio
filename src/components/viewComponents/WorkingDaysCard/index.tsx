@@ -1,13 +1,19 @@
 import { IoArrowForwardSharp } from "react-icons/io5"
-import { WorkingDaysArrayType } from "@/components/utils/WorkingDaysArray"
+import { WorkingDaysArrayType, daysInformationArray } from "@/components/utils/WorkingDaysArray"
 
-export default function WorkingDaysCard({ WorkingDaysArray }: any) {
+export default function WorkingDaysCard({ WorkingDaysArray, daysInformation, setDaysInformation, setdetailedDescription }: { WorkingDaysArray: Array<WorkingDaysArrayType>, daysInformation: string, setDaysInformation: any, setdetailedDescription: any }) {
+
+    const informationSetterFunc = (day: string) => {
+        setDaysInformation(day);
+        let sorterDataToDisplay = daysInformationArray.find((item) => item.day === day);
+        setdetailedDescription(sorterDataToDisplay);
+    }
     return (
         <div className="space-y-3">
             {
                 WorkingDaysArray.map((item: WorkingDaysArrayType, index: number) => {
                     return (
-                        <div key={index + 3} className="group flex justify-between items-center cursor-pointer px-4 w-full sm:w-96 py-1 rounded-xl border-2 border-heading hover:scale-105 duration-300 hover:shadow-lg ">
+                        <div onClick={() => informationSetterFunc(item.day)} key={index + 3} className={`group flex justify-between items-center cursor-pointer px-4 w-full sm:w-96 py-1 rounded-xl border-2 border-heading ${daysInformation === item.day ? "lg:scale-105" : "scale-100"} lg:hover:scale-105 duration-300 hover:shadow-lg `} >
                             <div className="flex items-center justify-start gap-3">
                                 <div>
                                     <div className="flex items-center justify-center bg-[#DD58DD] rounded-full w-12 h-12">{item.icon}</div>
@@ -22,6 +28,6 @@ export default function WorkingDaysCard({ WorkingDaysArray }: any) {
                     )
                 })
             }
-        </div>
+        </div >
     )
 }

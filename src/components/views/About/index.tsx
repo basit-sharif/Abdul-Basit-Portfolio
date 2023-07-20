@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function About() {
     return (
-        <div className={`px-3 py-14 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tl  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
+        <div className={`overflow-x-hidden px-3 py-14 text-center w-full bg-[#F3F4F6] dark:bg-gradient-to-tl  from-darkBackgroundBottom via-darkBackgroundTop to-darkBackgroundBottom`}>
             {/* <a id="about"></a> */}
             <div id="about" />
             <p className="text-4xl font-semibold underline">About Me</p>
