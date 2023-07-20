@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <div id='home' />
-      <main className='px-0 sm:px-10 pt-8 h-screen'>
+      <main className='px-0 sm:px-10 2xl:px-6 pt-8 h-screen'>
         <GoToTop heightOfPage={10} />
         <Hero />
         {/* <MyServices /> */}
