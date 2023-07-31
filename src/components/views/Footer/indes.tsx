@@ -20,9 +20,9 @@ export default function Footer() {
                     </div>
                     <ul className="flex justify-center items-center space-x-4">
                         <li><Link aria-label="Github username" href="https://github.com/basitgggg" target="_blank"><ImGithub fill="#7A879B" size={26} /></Link></li>
-                        <li><Link aria-label="Youtube channel" href="https://www.youtube.com/@leadingbright2580" target="_blank"><GrYoutube fill="#7A879B" size={24} /></Link></li>
+                        <li><Link aria-label="Youtube channel" href="https://www.youtube.com/@leadingbright" target="_blank"><GrYoutube fill="#7A879B" size={24} /></Link></li>
                         <li><Link aria-label="call me throught mobile" href="tel:+923023763614"><BsTelephonePlusFill fill="#7A879B" size={22} /></Link></li>
-                        <li><Link aria-label="reach me on Facebook" href="https://www.facebook.com/profile.php?id=100053174165999" target="_blank"><SiFacebook fill="#7A879B" size={26} /></Link></li>
+                        <li><Link aria-label="reach me on Facebook" href="https://www.facebook.com/basitgggg" target="_blank"><SiFacebook fill="#7A879B" size={26} /></Link></li>
                         <li><Link aria-label="My LinkedIn" href="https://www.linkedin.com/in/abdul-basit-417920251/" target="_blank"><IoLogoLinkedin fill="#7A879B" size={26} /></Link></li>
                         <li><Link aria-label="Mail me for give me work" href="mailto:ba3568008@gmail.com"><SiGmail fill="#7A879B" size={26} /></Link></li>
                     </ul>
