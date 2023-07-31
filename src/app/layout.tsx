@@ -6,7 +6,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Abdul-Basit',
-  description: 'Welcome to my software portfolio website! Here you will find a collection of high-quality software solutions designed to make your life easier and more productive.Throughout this you can place your order for a software.',
+  description: 'Hi, I am Abdul Basit (basitgggg) Here you will find a collection of high-quality software solutions to make your life easier and more productive.',
 }
 
 export default function RootLayout({
